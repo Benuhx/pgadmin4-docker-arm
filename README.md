@@ -9,7 +9,7 @@ Inspired by https://github.com/thaJeztah/pgadmin4-docker
 3. If you want to use volume bind modify directory owner with
 ```sudo chown -R 1000:50 /home/pi/pgadmin ```
 Replace '/home/pi/pgadmin' with your path. 1000:50 is defined in the Dockerfile
-4. Run with with ```docker-compose up```. pgAdmin takes ~ 15s for startup
+4. Run with with ```docker-compose up```. pgAdmin takes ~ 45s for startup on Raspberry Pi 3
 
 ## Example Docker-Compose
 ```yml
