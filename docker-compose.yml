@@ -1,0 +1,15 @@
+version: "3.4"
+services:    
+    pgadmin:
+      image: pgadmin4-arm
+      container_name: pgadmin
+      restart: always      
+      volumes:
+        - type: bind
+          source: "/home/pi/pgadmin"
+          target: /var/lib/pgadmin
+      environment:
+        PGADMIN_SETUP_EMAIL: "mail@pg.de"
+        PGADMIN_SETUP_PASSWORD: "TdiEbGOGHn1wQQAWhvrnZNeEVD8JDpjx"
+      ports:
+        - 5050:5050
