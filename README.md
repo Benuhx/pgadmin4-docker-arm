@@ -26,7 +26,7 @@ services:
 ```
 
 ## Build Docker-Image:
-1. Build Image with ```docker build -f Dockerfile -t pgadmin4-arm . ```
+1. Build Image with ```docker build -f Dockerfile -t pgadmin4-pi . ```
 2. Modfiy docker-compose (example below)
 3. If you want to use volume bind modify directory owner with
 ```sudo chown -R 1000:50 /home/pi/pgadmin ```
