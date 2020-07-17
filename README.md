@@ -4,14 +4,14 @@ Docker-Images for pgAdmin which runs on ARM, e.g. Raspberry pi 3 / 4
 
 Inspired by https://github.com/thaJeztah/pgadmin4-docker
 
-Dockerhub: https://hub.docker.com/r/benuhx/pgadmin4-arm
+Dockerhub: https://hub.docker.com/repository/docker/benuhx/pgadmin4-pi
 
 ## Example Docker-Compose
 ```yml
 version: "3.4"
 services:    
     pgadmin:
-      image: benuhx/pgadmin4-arm:4.21
+      image: benuhx/pgadmin4-pi:latest
       container_name: pgadmin
       restart: always      
       volumes:
