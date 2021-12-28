@@ -26,9 +26,16 @@ services:
 ```
 
 ## Build Docker-Image:
-1. Build Image with ```docker build -f Dockerfile -t pgadmin4-pi . ```
-2. Modfiy docker-compose (example below)
-3. If you want to use volume bind modify directory owner with
-```sudo chown -R 1000:50 /home/pi/pgadmin ```
+1. Build Image with: ```docker build -f Dockerfile -t pgadmin4-pi```.
+2. Modify `docker-compose.yml` (example below)
+3. If you want to use volume bind mount, modify directory owner with
+
+```
+sudo chown -R 1000:50 /home/pi/pgadmin
+```
+
+Or update the path to your own `$HOME` dir.
+
 Replace '/home/pi/pgadmin' with your path. 1000:50 is defined in the Dockerfile
+
 4. Run with with ```docker-compose up```. pgAdmin takes ~ 45s for startup on Raspberry Pi 3
