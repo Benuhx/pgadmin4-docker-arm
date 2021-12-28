@@ -9,11 +9,11 @@ Dockerhub: https://hub.docker.com/repository/docker/benuhx/pgadmin4-pi
 ## Example Docker-Compose
 ```yml
 version: "3.4"
-services:    
+services:
     pgadmin:
       image: benuhx/pgadmin4-pi:latest
       container_name: pgadmin
-      restart: always      
+      restart: always
       volumes:
         - type: bind
           source: "/home/pi/pgadmin"
