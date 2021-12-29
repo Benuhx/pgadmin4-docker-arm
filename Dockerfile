@@ -25,8 +25,8 @@ RUN apk add --no-cache alpine-sdk linux-headers \
 
 EXPOSE 5050
 
-COPY config_distro.py /usr/local/lib/python3.8/site-packages/pgadmin4/
+COPY config_distro.py /usr/local/lib/python3.10/site-packages/pgadmin4/
 
 USER pgadmin:pgadmin
-CMD ["python", "./usr/local/lib/python3.8/site-packages/pgadmin4/pgAdmin4.py"]
+CMD ["python", "./usr/local/lib/python3.10/site-packages/pgadmin4/pgAdmin4.py"]
 VOLUME /pgadmin/
