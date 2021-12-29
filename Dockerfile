@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.10-alpine
 
 # create a non-privileged user to use at runtime
 RUN addgroup -g 50 -S pgadmin \
@@ -15,6 +15,7 @@ RUN apk add --no-cache postgresql-dev libffi-dev zlib-dev jpeg-dev
 
 ENV PGADMIN_VERSION=6.3
 ENV PYTHONDONTWRITEBYTECODE=1
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
 RUN apk add --no-cache alpine-sdk linux-headers \
  && pip install --upgrade pip \
