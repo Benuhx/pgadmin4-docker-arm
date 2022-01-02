@@ -9,11 +9,11 @@ Dockerhub: https://hub.docker.com/repository/docker/benuhx/pgadmin4-pi
 ## Example Docker-Compose
 ```yml
 version: "3.4"
-services:    
+services:
     pgadmin:
       image: benuhx/pgadmin4-pi:latest
       container_name: pgadmin
-      restart: always      
+      restart: always
       volumes:
         - type: bind
           source: "/home/pi/pgadmin"
@@ -26,9 +26,14 @@ services:
 ```
 
 ## Build Docker-Image:
-1. Build Image with ```docker build -f Dockerfile -t pgadmin4-pi . ```
-2. Modfiy docker-compose (example below)
-3. If you want to use volume bind modify directory owner with
-```sudo chown -R 1000:50 /home/pi/pgadmin ```
-Replace '/home/pi/pgadmin' with your path. 1000:50 is defined in the Dockerfile
+1. Build Image with: ```docker build -f Dockerfile -t pgadmin4-pi```.
+2. Modify `docker-compose.yml` (example below)
+3. If you want to use a volume bind mount (useful for persisting the pgadmin configs), modify directory owner with:
+
+```
+sudo chown -R 1000:50 /home/pi/pgadmin
+```
+
+Replace `/home/pi/pgadmin` with your path. `1000:50` is defined in the Dockerfile
+
 4. Run with with ```docker-compose up```. pgAdmin takes ~ 45s for startup on Raspberry Pi 3
